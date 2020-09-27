@@ -1,0 +1,11 @@
+body {
+	font-family: "OpenSans-Light", Arial, sans-serif;
+	font-size: $fz-main;
+	color: $lighten-black-color;
+	line-height: 30px;
+}
+
+h1, h2, h3, h4, h5, h6, ul, p {
+	padding: 0;
+	margin: 0;
+}

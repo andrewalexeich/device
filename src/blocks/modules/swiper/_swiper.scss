@@ -1,0 +1,99 @@
+.swiper {
+    @include wrapper(-135px auto 115px);
+    position: relative;
+    &__slide {
+        @include flex(center, start);
+        position: relative;
+        &:after {
+            color: #fff;
+            font-family: "Gilroy-ExtraBold", sans-serif;
+            font-size: 175px;
+            line-height: 1;
+            position: absolute;
+            top: 12px;
+            right: 50px;
+            z-index: -1;
+        }
+        &--one:after {
+            content: "01";
+        }
+        &--two:after {
+            content: "02";
+        }
+        &--three:after {
+            content: "03";
+        }
+    }
+    &__left, &__right {
+        width: 560px;
+    }
+    &__left {
+        text-align: center;
+        margin-right: 23px;
+    }
+    &__right {
+        @include flex(start, start);
+        flex-direction: column;
+    }
+    &__heading {
+        margin-bottom: 30px;
+        padding-top: 55px;
+    }
+    &__description {
+        max-width: 520px;
+        margin-bottom: 60px;
+    }
+    &__btn {
+        margin-bottom: 70px;
+    }
+    &__details {
+        @include flex(center, start)
+    }
+    &__details-item {
+        margin-right: 80px;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    &__details-title {
+        color: #000;
+        font-size: 36px;
+        font-family: "Gilroy-Light", sans-serif;
+        margin-bottom: 20px;
+    }
+    &__details-subtitle {
+        font-size: 13px;
+    }
+    &__pagination {
+        @include flex(center, space-between);
+        width: 80px;
+        position: absolute;
+        right: 80px;
+        bottom: 150px;
+        z-index: 500;
+        .swiper-pagination-bullet {
+            display: block;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            border: 1px solid #000;
+            cursor: pointer;
+        }
+        .swiper-pagination-bullet-active {
+            @include flex(center, center);
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            border: 1px solid #000;
+            cursor: pointer;
+            &:after {
+                content: "";
+                display: block;
+                width: 4px;
+                height: 4px;
+                border-radius: 50%;
+                border: 1px solid #000;
+            }
+        }
+    }
+}

@@ -1,0 +1,129 @@
+.header {
+    @include wrapper(40px auto 0);
+    height: 300px;
+    background: $accent-color;
+    position: relative;
+    &--catalog {
+        height: 185px;
+    }
+    &__wrapper {
+        padding: 0 60px;
+    }
+    &__top {
+        @include flex(center, space-between);
+        padding: 35px 0;
+    }
+    &__search-form {
+        width: 440px;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__search-input {
+        flex-grow: 1;
+        padding: 16px 16px 16px 40px;
+        border: 0;
+        background: url("../img/sprites/sprite.svg#search") no-repeat 7px;
+        background-size: 16px 16px;
+        outline: 0;
+        &::placeholder {
+            color: rgba(#000, .5);
+        }
+        &:focus::placeholder {
+            color: transparent;
+        }
+        &:focus + .header__search-submit {
+            display: block;
+        }
+    }
+    &__search-submit {
+        display: none;
+        width: 85px;
+        border: 2px solid #000;
+        background: none;
+        cursor: pointer;
+        position: relative;
+        transition: .2s;
+        &:after {
+            content: "";
+            display: block;
+            width: 440px;
+            height: 2px;
+            background: #000;
+            position: absolute;
+            top: 100%;
+            right: 0;
+        }
+        &:hover {
+            background: #000;
+            color: #fff;
+        }
+    }
+    &__bottom {
+        @include flex(center, space-between);
+    }
+    &__catalog {
+        &:hover .header__catalog-popup {
+            @include flex(start, start)
+        }
+    }
+    &__catalog-link {
+        @include flex(center, start);
+        color: #000;
+        font-family: "Gilroy-ExtraBold", sans-serif;
+        font-size: $fz-big;
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 3.6px;
+        transition: .2s;
+        &:after {
+            content: "";
+            display: block;
+            width: 16px;
+            height: 16px;
+            background: url("../img/sprites/sprite.svg#plus") no-repeat right center;
+            margin-left: 16px;
+            opacity: .3;
+        }
+        &:hover {
+            color: rgba(#000, .6);
+        }
+    }
+    &__catalog-popup {
+        display: none;
+        width: 100%;
+        padding: 25px 60px 25px;
+        box-sizing: border-box;
+        background: $accent-color;
+        position: absolute;
+        z-index: 2;
+        left: 0;
+        bottom: 0;
+        &--catalog {
+            bottom: -110px;
+        }
+        &:hover {
+            @include flex(start, start);
+        }
+    }
+    &__catalog-popup-items {
+        list-style-type: none;
+        margin-right: 60px;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    &__catalog-popup-item {
+        margin-bottom: 7px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    &__catalog-popup-link {
+        color: #000;
+        text-decoration: none;
+        transition: .2s;
+        &:hover {
+            color: rgba(#000, .6);
+        }
+    }
+}

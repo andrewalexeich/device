@@ -1,0 +1,99 @@
+.catalog
+	.catalog__header
+		.catalog__filter-title Фильтр:
+		.catalog__sorting
+			.catalog__sorting-title Сортировка:
+			.catalog__sorting-options
+				button.catalog__sorting-option.catalog__sorting-option--active По цене
+				button.catalog__sorting-option По типу
+				button.catalog__sorting-option По популярности
+			.catalog__sorting-buttons
+				button.catalog__sorting-button.catalog__sorting-button--up(type="button" aria-label="sort-by")
+				button.catalog__sorting-button.catalog__sorting-button--active.catalog__sorting-button--down(type="button" aria-label="sort-by")
+	.catalog__wrapper
+		aside.catalog__filter
+			.catalog__filter-price
+				.catalog__filter-price-title Стоимость
+				.catalog__filter-price-block
+					.catalog__filter-price-controls
+					.catalog__filter-price-range-info
+						.catalog__filter-price-group
+							input.catalog__filter-price-input.catalog__filter-price-input--start(type="number" aria-label="price-min" placeholder="0" disabled)
+						.catalog__filter-price-group
+							input.catalog__filter-price-input.catalog__filter-price-input--end(type="number" aria-label="price-max" placeholder="30000" disabled)
+			.catalog__filter-options
+				.catalog__filter-options-title Цвет
+				.catalog__filter-list
+					.catalog__filter-options-item
+						label.catalog__filter-options-container Черный
+							input.catalog__filter-options-checkbox(type="checkbox" checked="checked" name="color")
+							span.catalog__filter-options-checkmark.catalog__filter-options-checkmark--checkbox
+					.catalog__filter-options-item
+						label.catalog__filter-options-container Белый
+							input.catalog__filter-options-checkbox(type="checkbox" name="color")
+							span.catalog__filter-options-checkmark.catalog__filter-options-checkmark--checkbox
+					.catalog__filter-options-item
+						label.catalog__filter-options-container Синий
+							input.catalog__filter-options-checkbox(type="checkbox" checked="checked" name="color")
+							span.catalog__filter-options-checkmark.catalog__filter-options-checkmark--checkbox
+					.catalog__filter-options-item
+						label.catalog__filter-options-container Красный
+							input.catalog__filter-options-checkbox(type="checkbox" checked="checked" name="color")
+							span.catalog__filter-options-checkmark.catalog__filter-options-checkmark--checkbox
+					.catalog__filter-options-item
+						label.catalog__filter-options-container Розовый
+							input.catalog__filter-options-checkbox(type="checkbox" name="color")
+							span.catalog__filter-options-checkmark.catalog__filter-options-checkmark--checkbox
+			.catalog__filter-options
+				.catalog__filter-options-title Bluetooth
+				.catalog__filter-list
+					.catalog__filter-options-item
+						label.catalog__filter-options-container Есть
+							input.catalog__filter-options-radio(type="radio" checked="checked" name="bt")
+							span.catalog__filter-options-checkmark
+					.catalog__filter-options-item
+						label.catalog__filter-options-container Нет
+							input.catalog__filter-options-radio(type="radio" name="bt")
+							span.catalog__filter-options-checkmark
+			+btn("#", "Показать")(class="btn btn--md")
+		.catalog__products
+			.catalog__products-list
+				figure.catalog__product
+					.catalog__product-info
+						.catalog__product-info-wrapper
+							+btn("#", "В корзину")(class="btn btn--md catalog__product-info-btn")
+							a.catalog__product-info-link(href="#") Добавить к сравнению
+					img.catalog__product-img(src="../img/products/item-1.jpg" alt="item")
+					figcaption.catalog__product-caption
+						a.catalog__product-title(href="#") Любительская селфи-палка
+						.catalog__product-price 500 руб.
+				figure.catalog__product
+					.catalog__product-info
+						.catalog__product-info-wrapper
+							+btn("#", "В корзину")(class="btn btn--md catalog__product-info-btn")
+							a.catalog__product-info-link(href="#") Добавить к сравнению
+					img.catalog__product-img(src="../img/products/item-2.jpg" alt="item")
+					figcaption.catalog__product-caption
+						a.catalog__product-title(href="#") Профессиональная селфи-палка
+						.catalog__product-price 1500 руб.
+				figure.catalog__product
+					.catalog__product-info
+						.catalog__product-info-wrapper
+							+btn("#", "В корзину")(class="btn btn--md catalog__product-info-btn")
+							a.catalog__product-info-link(href="#") Добавить к сравнению
+					img.catalog__product-img(src="../img/products/item-3.jpg" alt="item")
+					figcaption.catalog__product-caption
+						a.catalog__product-title(href="#") Непотопляемая селфи-палка
+						.catalog__product-price 2500 руб.
+				figure.catalog__product
+					.catalog__product-badge NEW
+					.catalog__product-info
+						.catalog__product-info-wrapper
+							+btn("#", "В корзину")(class="btn btn--md catalog__product-info-btn")
+							a.catalog__product-info-link(href="#") Добавить к сравнению
+					img.catalog__product-img(src="../img/products/item-4.jpg" alt="item")
+					figcaption.catalog__product-caption
+						a.catalog__product-title(href="#") Селфи-палка "Следуй за мной"
+						.catalog__product-price 4900 руб.
+
+				include ../../components/pagination/pagination

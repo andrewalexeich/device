@@ -1,0 +1,317 @@
+.catalog {
+    overflow-x: hidden;
+    &__header {
+        @include wrapper(0 auto);
+        @include flex(center, start);
+    }
+    &__filter-title {
+        display: flex;
+        align-items: center;
+        height: 90px;
+        padding: 0 150px 0 60px;
+        color: #000;
+        background: $darken-gray-color;
+        font-family: "Gilroy-ExtraBold", sans-serif;
+        font-size: $fz-md;
+        text-transform: uppercase;
+        letter-spacing: 3.2px;
+        position: relative;
+        &:before {
+            content: "";
+            display: block;
+            width: 50vw;
+            height: 100%;
+            background: $darken-gray-color;
+            position: absolute;
+            right: 100%;
+            top: 0;
+            bottom: 0;
+            z-index: -1;
+        }
+    }
+    &__sorting {
+        @include flex(center, start);
+        width: 100%;
+        height: 90px;
+        padding: 0 0 0 70px;
+        background: $gray-color;
+        position: relative;
+        &:after {
+            content: "";
+            display: block;
+            width: 50vw;
+            height: 100%;
+            background: $gray-color;
+            position: absolute;
+            left: 100%;
+            top: 0;
+            bottom: 0;
+            z-index: -1;
+        }
+    }
+    &__sorting-title {
+        margin-right: 55px;
+        color: #000;
+        font-family: "Gilroy-ExtraBold", sans-serif;
+        font-size: $fz-md;
+        text-transform: uppercase;
+        letter-spacing: 3.2px;
+    }
+    &__sorting-option {
+        margin-right: 30px;
+        background: none;
+        border: 0;
+        outline: 0;
+        padding: 0;
+        color: rgba(#000, .3);
+        font-size: $fz-sm;
+        cursor: pointer;
+        transition: .2s;
+        &:hover {
+            color: rgba(#000, .6);
+        }
+        &--active {
+            color: #000;
+        }
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    &__sorting-buttons {
+        @include flex(center, center);
+        margin-left: auto;
+    }
+    &__sorting-button {
+        width: 11px;
+        height: 10px;
+        border: 0;
+        outline: 0;
+        padding: 0;
+        margin-right: 20px;
+        opacity: .2;
+        cursor: pointer;
+        transition: .2s;
+        &:hover {
+            opacity: .4;
+        }
+        &:last-child {
+            margin-right: 0;
+        }
+        &--up {
+            background: url("../img/sprites/sprite.svg#icon-up-dir") no-repeat center center;
+        }
+        &--down {
+            background: url("../img/sprites/sprite.svg#icon-down-dir") no-repeat center center;
+        }
+        &--active {
+            opacity: 1;
+        }
+    }
+    &__wrapper {
+        @include flex(stretch, start);
+        @include wrapper(0 auto);
+    }
+    &__filter {
+        padding: 70px 38px 70px 60px;
+        background: $gray-color;
+        position: relative;
+        &:before {
+            content: "";
+            display: block;
+            width: 50vw;
+            height: 100%;
+            background: $gray-color;
+            position: absolute;
+            right: 100%;
+            top: 0;
+            z-index: -1;
+        }
+    }
+    &__filter-price {
+        margin-bottom: 40px;
+    }
+    &__filter-price-controls {
+        height: 2px;
+        margin-bottom: 6px;
+        &.noUi-target {
+            background: #dbdbdb;
+            box-shadow: none;
+            border: 0;
+        }
+        &.noUi-horizontal .noUi-handle {
+            top: -9px;
+        }
+        .noUi-connect {
+            background: #91c92f;
+        }
+        .noUi-handle {
+            width: 20px;
+            height: 23px;
+            background: url("../img/sprites/sprite.svg#filter-button") no-repeat;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+            border: 0;
+            outline: 0;
+            cursor: grabbing;
+            &:before, &:after {
+                content: none;
+            }
+        }
+    }
+    &__filter-price-range-info {
+        @include flex(center, start);
+    }
+    &__filter-price-group {
+        position: relative;
+        width: 95px;
+    }
+    &__filter-price-input {
+        color: rgba(#000, .3);
+        width: 100%;
+        height: 40px;
+        border: 0;
+        background: none;
+        text-align: center;
+        -moz-appearance: textfield;
+        -webkit-appearance: textfield;
+        appearance: none;
+    }
+    &__filter-options {
+        margin-bottom: 40px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    &__filter-price-title, &__filter-options-title {
+        color: #000;
+        font-family: "Gilroy-ExtraBold", sans-serif;
+        font-size: $fz-big;
+        margin-bottom: 30px;
+        &:before {
+            content: "";
+            display: block;
+            width: 200px;
+            height: 2px;
+            background: #000;
+            margin-bottom: 16px;
+        }
+    }
+    &__filter-options-container {
+        display: block;
+        position: relative;
+        padding-left: 35px;
+        margin-bottom: 15px;
+        cursor: pointer;
+        user-select: none;
+        font-size: $fz-sm;
+        .catalog__filter-options-radio, .catalog__filter-options-checkbox {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+        }
+        .catalog__filter-options-radio:checked ~ .catalog__filter-options-checkmark {
+            width: 25px;
+            height: 25px;
+            background: url("../img/sprites/sprite.svg#radio-on") no-repeat;
+            transition: .2s;
+            &:hover {
+                opacity: .6;
+            }
+        }
+        .catalog__filter-options-checkbox:checked ~ .catalog__filter-options-checkmark--checkbox {
+            width: 23px;
+            height: 27px;
+            background: url("../img/sprites/sprite.svg#checkbox-on") no-repeat;
+            transition: .2s;
+            &:hover {
+                opacity: .6;
+            }
+        }
+    }
+    &__filter-options-checkmark {
+        position: absolute;
+        top: 2px;
+        left: 0;
+        width: 25px;
+        height: 25px;
+        background:url("../img/sprites/sprite.svg#radio-off") no-repeat;
+        transition: .2s;
+        &:hover {
+            opacity: .6;
+        }
+        &--checkbox {
+            width: 23px;
+            height: 27px;
+            background:url("../img/sprites/sprite.svg#checkbox-off") no-repeat;
+            transition: .2s;
+            &:hover {
+                opacity: .6;
+            }
+        }
+    }
+    &__products {
+        width: 100%;
+        padding: 70px 0 70px 70px;
+    }
+    &__products-list {
+        @include flex(start, space-between);
+        flex-wrap: wrap;
+    }
+    &__product {
+        width: 360px;
+        margin: 0 0 50px;
+        position: relative;
+        &:hover .catalog__product-info {
+            @include flex(center, center);
+        }
+    }
+    &__product-badge {
+        @include flex(center, center);
+        width: 55px;
+        height: 55px;
+        border-radius: 50%;
+        border: 2px solid darken($gray-color, 15%);
+        position: absolute;
+        z-index: 100;
+        right: 35px;
+        top: 35px;
+        font-family: "Gilroy-ExtraBold", sans-serif;
+        color: darken($gray-color, 15%);
+    }
+    &__product-info {
+        display: none;
+        position: absolute;
+        width: 100%;
+        height: 380px;
+        background: rgba($gray-color, .7);
+    }
+    &__product-info-wrapper {
+        text-align: center;
+    }
+    &__product-info-btn {
+        margin-bottom: 35px;
+    }
+    &__product-info-link {
+        color: rgba(#000, .5);
+        text-decoration: none;
+        font-size: $fz-sm;
+        transition: .2s;
+        &:hover {
+            color: #000;
+        }
+    }
+    &__product-caption {
+        @include flex(start, space-between);
+    }
+    &__product-title {
+        max-width: 250px;
+        color: #000;
+        font-family: "Gilroy-ExtraBold", sans-serif;
+        font-size: $fz-big;
+        text-decoration: none;
+    }
+    &__product-price {
+        color: #000;
+        font-size: $fz-md;
+    }
+}

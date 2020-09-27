@@ -1,0 +1,51 @@
+.about {
+    margin-bottom: 100px;
+    &__wrapper {
+        @include wrapper(0 auto);
+        @include flex(start, space-between);
+    }
+    &__left {
+        width: 460px;
+    }
+    &__right {
+        width: 560px;
+    }
+    &__heading {
+        margin-bottom: 60px;
+    }
+    &__content {
+        margin-bottom: 40px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    &__companies {
+        list-style-type: none;
+        margin-bottom: 40px;
+    }
+    &__company {
+        @include flex(center, start);
+        color: #000;
+        font-family: "Gilroy-ExtraBold", sans-serif;
+        font-size: 16px;
+        margin-bottom: 25px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        &:before {
+            content: "";
+            display: block;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            border: 2px solid $gray-color;
+            margin-right: 20px;
+        }
+    }
+    &__map {
+        width: 100%;
+        height: 260px;
+        border: 0;
+        margin-top: 40px;
+    }
+}

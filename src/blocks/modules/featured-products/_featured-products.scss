@@ -1,0 +1,35 @@
+.featured-products {
+    margin-bottom: 165px;
+    &__wrapper {
+        @include wrapper(0 auto);
+        @include flex(start, space-between);
+    }
+    &__link {
+        display: block;
+        width: 160px;
+        color: #000;
+        font-family: "Gilroy-ExtraBold", sans-serif;
+        font-size: $fz-big;
+        text-decoration: none;
+        line-height: 24px;
+        .featured-products__img-wrapper:hover {
+            background: $yellow-color;
+        }
+    }
+    &__item {
+        margin: 0;
+    }
+    &__img-wrapper {
+        @include flex(center, center);
+        width: auto;
+        height: 160px;
+        background: $accent-color;
+        transition: .2s;
+        &--fix {
+            align-items: flex-end;
+        }
+    }
+    &__title {
+        margin-top: 40px;
+    }
+}

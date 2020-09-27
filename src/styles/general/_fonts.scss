@@ -1,0 +1,72 @@
+@font-face {
+	font-family: "OpenSans-Light";
+	font-display: swap;
+	src: url("../fonts/opensanslight.woff2") format("woff2"),
+		url("../fonts/opensanslight.woff") format("woff");
+	font-weight: $font-light;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Gilroy-Light";
+	font-display: swap;
+	src: url("../fonts/gilroylight.woff2") format("woff2"),
+		url("../fonts/gilroylight.woff") format("woff");
+	font-weight: $font-light;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Gilroy-ExtraBold";
+	font-display: swap;
+	src: url("../fonts/gilroyextrabold.woff2") format("woff2"),
+		url("../fonts/gilroyextrabold.woff") format("woff");
+	font-weight: $font-extrabold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "icons";
+	src: url("../fonts/icons.woff2") format("woff2"),
+		url("../fonts/icons.woff") format("woff");
+}
+
+.icon:before {
+	font-family: "icons";
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	/* speak: none; only necessary if not using the private unicode range (firstGlyph option) */
+	text-decoration: none;
+	text-transform: none;
+}
+
+.icon-cart:before {
+	content: "\E001";
+}
+
+.icon-compare:before {
+	content: "\E002";
+}
+
+.icon-fb:before {
+	content: "\E003";
+}
+
+.icon-html:before {
+	content: "\E004";
+}
+
+.icon-twitter:before {
+	content: "\E005";
+}
+
+.icon-user:before {
+	content: "\E006";
+}
+
+.icon-vk:before {
+	content: "\E007";
+}

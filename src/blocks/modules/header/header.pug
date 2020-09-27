@@ -1,0 +1,100 @@
+if page === "catalog"
+	header.header.header--catalog
+		.header__wrapper
+			h1.logo
+				a.logo-link(href="/") Device
+			.header__top
+				form.header__search-form
+					input.header__search-input(type="text" placeholder="Поиск по сайту")
+					button.header__search-submit Найти
+				ul.header__user-menu.user-menu
+					li.user-menu__item.user-menu__item--login
+						a.user-menu__link(href="#")
+							if page === "catalog"
+								i.icon.icon-user
+								| Андрей Горохов
+							else
+								i.icon.icon-user
+								| Войти
+					li.user-menu__item
+						a.user-menu__link(href="#")
+							i.icon.icon-compare
+							| Сравнить
+					li.user-menu__item
+						a.user-menu__link(href="#")
+							i.icon.icon-cart
+							| Корзина
+			nav.header__bottom
+				.header__catalog
+					.header__catalog-popup.header__catalog-popup--catalog
+						ul.header__catalog-popup-items
+							li.header__catalog-popup-item
+								a.header__catalog-popup-link(href="#") Виртуальная реальность
+							li.header__catalog-popup-item
+								a.header__catalog-popup-link(href="#") Моноподы для селфи
+							li.header__catalog-popup-item
+								a.header__catalog-popup-link(href="#") Экшн-камеры
+						ul.header__catalog-popup-items
+							li.header__catalog-popup-item
+								a.header__catalog-popup-link(href="#") Фитнес-браслеты
+							li.header__catalog-popup-item
+								a.header__catalog-popup-link(href="#") Умные часы
+						ul.header__catalog-popup-items
+							li.header__catalog-popup-item
+								a.header__catalog-popup-link(href="#") Квадрокоптеры
+					a.header__catalog-link(href="catalog.html") Каталог товаров
+				ul.header__menu.menu
+					li.menu__item
+						a.menu__link(href="#") Доставка
+					li.menu__item
+						a.menu__link(href="#") Гарантия
+					li.menu__item.menu__item--contacts
+						a.menu__link(href="#") Контакты
+else
+	header.header
+		.header__wrapper
+			h1.logo
+				a.logo-link(href="/") Device
+			.header__top
+				form.header__search-form
+					input.header__search-input(type="text" placeholder="Поиск по сайту")
+					button.header__search-submit Найти
+				ul.header__user-menu.user-menu
+					li.user-menu__item.user-menu__item--login
+						a.user-menu__link(href="#")
+							i.icon.icon-user
+							| Войти
+					li.user-menu__item
+						a.user-menu__link(href="#")
+							i.icon.icon-compare
+							| Сравнить
+					li.user-menu__item
+						a.user-menu__link(href="#")
+							i.icon.icon-cart
+							| Корзина
+			nav.header__bottom
+				.header__catalog
+					.header__catalog-popup
+						ul.header__catalog-popup-items
+							li.header__catalog-popup-item
+								a.header__catalog-popup-link(href="#") Виртуальная реальность
+							li.header__catalog-popup-item
+								a.header__catalog-popup-link(href="#") Моноподы для селфи
+							li.header__catalog-popup-item
+								a.header__catalog-popup-link(href="#") Экшн-камеры
+						ul.header__catalog-popup-items
+							li.header__catalog-popup-item
+								a.header__catalog-popup-link(href="#") Фитнес-браслеты
+							li.header__catalog-popup-item
+								a.header__catalog-popup-link(href="#") Умные часы
+						ul.header__catalog-popup-items
+							li.header__catalog-popup-item
+								a.header__catalog-popup-link(href="#") Квадрокоптеры
+					a.header__catalog-link(href="catalog.html") Каталог товаров
+				ul.header__menu.menu
+					li.menu__item
+						a.menu__link(href="#") Доставка
+					li.menu__item
+						a.menu__link(href="#") Гарантия
+					li.menu__item.menu__item--contacts
+						a.menu__link(href="#") Контакты

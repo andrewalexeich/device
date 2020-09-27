@@ -1,0 +1,10 @@
+@mixin wrapper($content) {
+    width: 1160px;
+    margin: $content;
+}
+
+@mixin flex($align_items, $jc) {
+    display: flex;
+    align-items: $align_items;
+    justify-content: $jc;
+}

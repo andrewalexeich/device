@@ -1,0 +1,57 @@
+.footer {
+    padding: 65px 0;
+    background: $lighten-black-color;
+    &__inner {
+        @include wrapper(0 auto);
+    }
+    &__top {
+        @include flex(start, space-between);
+        margin-bottom: 40px;
+    }
+    &__middle {
+        color: #fff;
+        @include flex(start, space-between);
+        margin-bottom: 80px;
+    }
+    &__address {
+        font-style: normal;
+    }
+    &__links {
+        @include flex(center, space-between);
+        &:before {
+            content: "";
+            display: block;
+            width: 80px;
+            height: 7px;
+            background: $yellow-color;
+            margin-right: auto;
+        }
+    }
+    &__link {
+        font-size: 32px;
+        margin-right: 20px;
+        &:last-child {
+            margin-right: 0;
+        }
+        &--htmlacademy {
+            margin-left: auto;
+        }
+        &.icon {
+            color: rgba(#fff, .3);
+            text-decoration: none;
+            transition: .2s;
+            &:hover {
+                color: rgba(#fff, .6);
+            }
+        }
+        &.icon-html {
+            font-size: 32px;
+            color: $yellow-color;
+            text-decoration: none;
+            transition: .2s;
+            &:hover {
+                color: rgba($yellow-color, .6);
+            }
+        }
+    }
+}

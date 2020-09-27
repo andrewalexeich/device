@@ -1,0 +1,28 @@
+.logo {
+    line-height: 1;
+    position: absolute;
+    top: -23px;
+    &--footer {
+        position: relative;
+        top: -15px;
+    }
+}
+
+.logo-link {
+    color: #000;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 48px;
+    font-family: "Gilroy-ExtraBold", sans-serif;
+    letter-spacing: .48px;
+    transition: .2s;
+    &:hover {
+        opacity: .6;
+    }
+    &--footer {
+        color: $yellow-color;
+        &:hover {
+            opacity: .6;
+        }
+    }
+}

@@ -1,0 +1,39 @@
+.user-menu {
+    @include flex(center, space-between);
+    width: 515px;
+    list-style-type: none;
+    font-size: 0;
+    &--footer {
+        display: block;
+        width: auto;
+    }
+    &__item {
+        display: inline-block;
+        margin-right: 40px;
+        font-size: $fz-main;
+        &:last-child {
+            margin-right: 0;
+        }
+        &--login {
+            margin-right: auto;
+        }
+    }
+    &__link {
+        color: #000;
+        text-decoration: none;
+        transition: .2s;
+        &:hover {
+        opacity: .6;
+        }
+        &--footer {
+            color: rgba(#fff, .7);
+            .icon {
+                color: $yellow-color;
+            }
+        }
+        .icon {
+            margin-right: 12px;
+            font-size: 12px;
+        }
+    }
+}

@@ -1,0 +1,14 @@
+.partners {
+    margin-bottom: 95px;
+    &__wrapper {
+        @include wrapper(0 auto);
+        @include flex(center, space-between);
+    }
+    &__link {
+        filter: grayscale(100%) opacity(15%);
+        transition: .2s;
+        &:hover {
+            filter: none;
+        }
+    }
+}

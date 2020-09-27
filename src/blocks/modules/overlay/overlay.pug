@@ -1,0 +1,12 @@
+.overlay
+	form.overlay__form(action="#" method="post")
+		span.overlay__form-close
+		.overlay__form-content
+			.overlay__form-group
+				label.overlay__form-label(for="name") Ваше имя:
+					input.overlay__form-input(type="text" name="name" id="name" aria-label="name" placeholder="Имя, фамилия" required)
+				label.overlay__form-label(for="email") Ваш e-mail:
+					input.overlay__form-input(type="email" name="email" id="email" aria-label="email" placeholder="email@example.com" required)
+			label.overlay__form-label(for="msg") Текст письма:
+				textarea.overlay__form-textarea(name="msg" id="msg" aria-label="msg" placeholder="В свободной форме" required)
+		button.overlay__form-submit(type="submit") Отправить

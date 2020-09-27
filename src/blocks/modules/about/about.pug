@@ -1,0 +1,17 @@
+.about
+	.about__wrapper
+		.about__left
+			h2.about__heading.heading.heading--line.heading--line-black О нас
+			.about__content Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.
+			.about__content Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:
+			ul.about__companies
+				li.about__company Деловые Линии
+				li.about__company Автотрейдинг
+				li.about__company ЖелДорЭкспедиция
+			+btn("#", "Подробнее о нас")(class="btn btn--big")
+		.about__right
+			h2.about__heading.heading.heading--line.heading--line-black Контакты
+			.about__content Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.
+				iframe.about__map(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2249.1125488779976!2d37.52742931592807!3d55.687030980535816!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cf65f5c8955%3A0x694710ccd55501e!2z0YPQuy4g0KHRgtGA0L7QuNGC0LXQu9C10LksIDE1LCDQnNC-0YHQutCy0LAsIDExOTMxMQ!5e0!3m2!1sru!2sru!4v1560975233482!5m2!1sru!2sru"
+					aria-label="map")
+			+btn("javascript:void(0)", "Напишите нам")(class="btn btn--big btn--overlay")

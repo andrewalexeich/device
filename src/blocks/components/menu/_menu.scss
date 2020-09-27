@@ -1,0 +1,38 @@
+.menu {
+    @include flex(center, space-between);
+    width: 515px;
+    list-style-type: none;
+    font-size: 0;
+    &--footer {
+        width: auto;
+        display: block;
+    }
+    &__item {
+        font-size: $fz-big;
+        display: inline-block;
+        margin-right: 40px;
+        &:last-child {
+            margin-right: 0;
+        }
+        &--contacts {
+            margin-left: auto;
+        }
+    }
+    &__link {
+        color: #000;
+        font-family: "Gilroy-ExtraBold", sans-serif;
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 3.6px;
+        transition: .2s;
+        &:hover {
+            color: rgba(#000, .6);
+        }
+        &--footer {
+            color: #fff;
+            &:hover {
+                color: rgba(#fff, .6);
+            }
+        }
+    }
+}
